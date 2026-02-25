@@ -29,10 +29,13 @@ const Average=()=>{
   return((good + (neutral*0) + (bad*-1))/Total())
 
 }
+<<<<<<< HEAD
 
 const Positive=()=>{
   return((good/Total())*100)
 }
+=======
+>>>>>>> c3c6ec4d1dc53166679da64f248e081660f13d0d
 
   return(<div>
     <h1>Give Feedback</h1>
@@ -45,7 +48,10 @@ const Positive=()=>{
     <p>Bad: {bad} </p>
     <p>Total feedback tokens: {Total()} </p>
     <p>Average: {Average()} </p>
+<<<<<<< HEAD
     <p>Positive: {Positive()}% </p>
+=======
+>>>>>>> c3c6ec4d1dc53166679da64f248e081660f13d0d
   </div>)
 }
 
