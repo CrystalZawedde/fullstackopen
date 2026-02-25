@@ -2,6 +2,8 @@ import { useState } from "react"
 const Button=({onClick, text})=>{
   return(<button onClick={onClick}>{text}</button>)
 }
+
+
 const App = () => {
   const [good,setGood]= useState(0)
   const [neutral,setNeutral]= useState(0)
@@ -29,31 +31,30 @@ const Average=()=>{
   return((good + (neutral*0) + (bad*-1))/Total())
 
 }
-<<<<<<< HEAD
 
 const Positive=()=>{
   return((good/Total())*100)
 }
-=======
->>>>>>> c3c6ec4d1dc53166679da64f248e081660f13d0d
-
+const Statistics=()=>{
   return(<div>
-    <h1>Give Feedback</h1>
-    <Button onClick={good_feedback} text="good"/>
-    <Button onClick={neutral_feedback} text="neutral"/>
-    <Button onClick={bad_feedback} text="bad"/>
     <h1>Statistics</h1>
     <p>Good: {good} </p>
     <p>neutral: {neutral} </p>
     <p>Bad: {bad} </p>
     <p>Total feedback tokens: {Total()} </p>
     <p>Average: {Average()} </p>
-<<<<<<< HEAD
     <p>Positive: {Positive()}% </p>
-=======
->>>>>>> c3c6ec4d1dc53166679da64f248e081660f13d0d
   </div>)
 }
 
+  return(<div>
+    <h1>Give Feedback</h1>
+    <Button onClick={good_feedback} text="good"/>
+    <Button onClick={neutral_feedback} text="neutral"/>
+    <Button onClick={bad_feedback} text="bad"/>
+    <Statistics/>
+
+  </div>)
+}
 
 export default App 
