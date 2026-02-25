@@ -21,6 +21,14 @@ const bad_feedback=()=>{
   console.log("Setting bad")
   setBad(bad+1)
 }
+const Total=()=>{
+  return(good + neutral + bad)
+
+}
+const Average=()=>{
+  return((good + (neutral*0) + (bad*-1))/Total())
+
+}
 
   return(<div>
     <h1>Give Feedback</h1>
@@ -31,6 +39,8 @@ const bad_feedback=()=>{
     <p>Good: {good} </p>
     <p>neutral: {neutral} </p>
     <p>Bad: {bad} </p>
+    <p>Total feedback tokens: {Total()} </p>
+    <p>Average: {Average()} </p>
   </div>)
 }
 
