@@ -36,6 +36,8 @@ const Positive=()=>{
   return((good/Total())*100)
 }
 const Statistics=()=>{
+  if (Total()===0)
+    return(<p>No feedback given yet.</p>) 
   return(<div>
     <h1>Statistics</h1>
     <p>Good: {good} </p>
